@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: apt update
+      run: sudo apt update
     - name: Run a multi-line script
       run: |
-        apt install apache2 -y
-        apachectl --version
+        sudo apt install apache2 -y
+        sudo apachectl --version
