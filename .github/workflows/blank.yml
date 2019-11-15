@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: sudo apt update
+    - name: Run a multi-line script
+      run: |
+        sudo apt install apache2 -y
+        sudo apachectl --version
